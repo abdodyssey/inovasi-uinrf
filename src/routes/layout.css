@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f172a;
+  --color-secondary: #1e293b;
+  --color-accent: #475569;
+  --color-accent-foreground: #ffffff;
+  
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-sans: "Geist", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+/* Mobile-first section padding */
+.section-padding {
+  @apply py-16 px-6 md:py-24 md:px-12 lg:px-24;
+}
+
+/* Gradient utility based on the logo's spectrum */
+.bg-logo-gradient {
+  @apply bg-gradient-to-r from-[#f59e0b] via-[#ef4444] to-[#6366f1];
+}
+
+.text-logo-gradient {
+  @apply bg-gradient-to-r from-[#f59e0b] via-[#ef4444] to-[#6366f1] bg-clip-text text-transparent;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  animation: fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up, .reveal.visible {
+    animation: none;
+    opacity: 1;
+  }
+}
