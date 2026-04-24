@@ -22,7 +22,7 @@
 
 		<!-- Subtle Grid Pattern -->
 		<div
-			class="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent)] opacity-[0.03]"
+			class="absolute inset-0 mask-[radial-gradient(ellipse_at_center,black,transparent)] opacity-[0.03]"
 		>
 			<svg width="100%" height="100%">
 				<pattern id="hero-grid" width="40" height="40" patternUnits="userSpaceOnUse">

@@ -36,11 +36,11 @@
 
 /* Gradient utility based on the logo's spectrum */
 .bg-logo-gradient {
-	@apply bg-gradient-to-r from-[#f59e0b] via-[#ef4444] to-[#6366f1];
+	@apply bg-linear-to-r from-[#f59e0b] via-[#ef4444] to-[#6366f1];
 }
 
 .text-logo-gradient {
-	@apply bg-gradient-to-r from-[#f59e0b] via-[#ef4444] to-[#6366f1] bg-clip-text text-transparent;
+	@apply bg-linear-to-r from-[#f59e0b] via-[#ef4444] to-[#6366f1] bg-clip-text text-transparent;
 }
 
 /* Animations */

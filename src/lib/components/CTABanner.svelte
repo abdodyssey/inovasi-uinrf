@@ -17,7 +17,7 @@
 
 			<!-- Subtle Grid -->
 			<div
-				class="absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)] opacity-10"
+				class="absolute inset-0 mask-[linear-gradient(to_bottom,black,transparent)] opacity-10"
 			>
 				<svg width="100%" height="100%">
 					<pattern id="cta-grid" width="40" height="40" patternUnits="userSpaceOnUse">
