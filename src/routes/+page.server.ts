@@ -1,9 +1,9 @@
 import { fail } from '@sveltejs/kit';
 import { Resend } from 'resend';
-import { RESEND_API_KEY, CONTACT_EMAIL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import type { Actions } from './$types';
 
-const resend = new Resend(RESEND_API_KEY);
+const resend = new Resend(env.RESEND_API_KEY);
 
 export const actions: Actions = {
 	submitFeedback: async ({ request }) => {
@@ -23,7 +23,7 @@ export const actions: Actions = {
 		try {
 			const { error } = await resend.emails.send({
 				from: 'Inovasi UINRF <onboarding@resend.dev>',
-				to: [CONTACT_EMAIL],
+				to: [env.CONTACT_EMAIL],
 				subject: `New Feedback from ${name}`,
 				html: `
 					<div style="font-family: sans-serif; padding: 20px; color: #333;">
