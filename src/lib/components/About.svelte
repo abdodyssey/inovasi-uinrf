@@ -19,7 +19,7 @@
 			<div class="space-y-6">
 				<div class="flex gap-4">
 					<div
-						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-white text-accent shadow-sm"
+						class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white text-accent shadow-sm"
 					>
 						<Target size={24} />
 					</div>
@@ -32,7 +32,7 @@
 				</div>
 				<div class="flex gap-4">
 					<div
-						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-white text-accent shadow-sm"
+						class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white text-accent shadow-sm"
 					>
 						<Users size={24} />
 					</div>

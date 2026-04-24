@@ -4,6 +4,7 @@
 	import Camera from 'lucide-svelte/icons/camera';
 	import Mail from 'lucide-svelte/icons/mail';
 </script>
+
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
 <footer class="bg-slate-950 pt-20 pb-10 text-white">
 	<div class="mx-auto max-w-7xl px-6 md:px-12">

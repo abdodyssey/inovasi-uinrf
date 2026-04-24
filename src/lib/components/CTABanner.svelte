@@ -40,7 +40,7 @@
 
 				<a
 					href="https://rafanovation.cloud"
-					class="group flex flex-shrink-0 items-center gap-3 rounded-lg bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-100"
+					class="group flex shrink-0 items-center gap-3 rounded-lg bg-white px-8 py-4 font-bold text-primary shadow-xl transition-all hover:bg-slate-100"
 				>
 					Gabung Sekarang
 					<ExternalLink size={20} class="text-accent" />
