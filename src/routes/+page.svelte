@@ -6,24 +6,31 @@
 	import WhatWeDo from '$lib/components/WhatWeDo.svelte';
 	import WhyJoinUs from '$lib/components/WhyJoinUs.svelte';
 	import CTABanner from '$lib/components/CTABanner.svelte';
+	import Feedback from '$lib/components/Feedback.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	onMount(() => {
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					entry.target.classList.add('visible');
-				}
-			});
-		}, { threshold: 0.1 });
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visible');
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
 
-		document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+		document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 	});
 </script>
 
 <svelte:head>
 	<title>Tim Inovasi UIN Raden Fatah | Digital Transformation</title>
-	<meta name="description" content="Official Innovation Team of UIN Raden Fatah. Empowering academic excellence through digital transformation." />
+	<meta
+		name="description"
+		content="Official Innovation Team of UIN Raden Fatah. Empowering academic excellence through digital transformation."
+	/>
 </svelte:head>
 
 <Navbar />
@@ -38,6 +45,9 @@
 	</div>
 	<div class="reveal">
 		<WhyJoinUs />
+	</div>
+	<div class="reveal">
+		<Feedback />
 	</div>
 	<div class="reveal">
 		<CTABanner />
