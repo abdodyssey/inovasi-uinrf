@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 import { env } from '$env/dynamic/private';
 import type { Actions } from './$types';
 
-const resend = new Resend(env.RESEND_API_KEY);
+const resend = new Resend(env.RESEND_API_KEY || '');
 
 export const actions: Actions = {
 	submitFeedback: async ({ request }) => {
@@ -21,6 +21,14 @@ export const actions: Actions = {
 		}
 
 		try {
+			if (!env.CONTACT_EMAIL) {
+				console.error('CONTACT_EMAIL is not configured in environment variables');
+				return fail(500, {
+					error: true,
+					message: 'Konfigurasi email belum lengkap. / Email configuration incomplete.'
+				});
+			}
+
 			const { error } = await resend.emails.send({
 				from: 'Inovasi UINRF <onboarding@resend.dev>',
 				to: [env.CONTACT_EMAIL],
